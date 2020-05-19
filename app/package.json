@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "0.1.0",
-  "homepage": "https://laymantruant.github.io/aoe2de/",
+  "homepage": "https://laymantruant.github.io/aoe2de",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.28",
