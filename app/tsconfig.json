@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
-    "types": ["jest"]
+    "types": ["jest", "@types/testing-library__jest-dom"],
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true
   }
 }
