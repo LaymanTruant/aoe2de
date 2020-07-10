@@ -43,7 +43,7 @@ jobs:
         yarn test
     - name: yarn build
       run: |
-        yarn run build --if-present
+        yarn build
     - name: Deployment
       run: |
         cd $PUBLISH_DIR
