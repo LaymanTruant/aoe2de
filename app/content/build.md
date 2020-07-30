@@ -1,5 +1,5 @@
 ---
-title: "Build"
+title: "升級順序"
 ---
 目錄
-- [肉馬](https://laymantruant.github.io/aoe2de/build/scout)
+- [肉馬](/build/scout)
