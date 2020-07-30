@@ -1,5 +1,5 @@
 ---
-title: "升級順序"
+title: "開局技巧"
 ---
 目錄
-- [肉馬](/build/scout)
+- [肉馬快攻](/build/scout)
