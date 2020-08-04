@@ -1,28 +1,28 @@
 const config = {
   gatsby: {
     pathPrefix: "/aoe2de",
-    siteUrl: "https://hasura.io",
+    siteUrl: "https://laymantruant.github.io/aoe2de/",
     gaTrackingId: null,
     trailingSlash: false
   },
   header: {
     logo:
-      "https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/brand.svg",
-    logoLink: "https://hasura.io/learn/",
+      "https://imgur.com/YlO4ts6.png",
+    logoLink: "/",
     title:
-      "<a href='https://hasura.io/learn/'><img class='img-responsive' src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/learn-logo.svg' alt='Learn logo' /></a>",
-    githubUrl: "https://github.com/hasura/gatsby-gitbook-boilerplate",
+      "<div>世紀帝國2決定版<div>",
+    githubUrl: "https://github.com/LaymanTruant/aoe2de",
     helpUrl: "",
     tweetText: "",
     social: `<li>
-		    <a href="https://twitter.com/hasurahq" target="_blank" rel="noopener">
+		    <a href="https://twitter.com/" target="_blank" rel="noopener">
 		      <div class="twitterBtn">
 		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/twitter-brands-block.svg' alt={'Discord'}/>
 		      </div>
 		    </a>
 		  </li>
 			<li>
-		    <a href="https://discordapp.com/invite/hasura" target="_blank" rel="noopener">
+		    <a href="https://discordapp.com/" target="_blank" rel="noopener">
 		      <div class="discordBtn">
 		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/discord-brands-block.svg' alt={'Discord'}/>
 		      </div>
@@ -39,25 +39,24 @@ const config = {
   },
   sidebar: {
     forcedNavOrder: [
-      "/introduction", // add trailing slash if enabled above
-      "/codeblock"
+      "/build", // add trailing slash if enabled above
     ],
     collapsedNav: [
-      "/codeblock" // add trailing slash if enabled above
+      "/build" // add trailing slash if enabled above
     ],
-    links: [{ text: "Hasura", link: "https://hasura.io" }],
+    links: [{ text: "Steam商店頁面", link: "https://store.steampowered.com/app/813780/Age_of_Empires_II_Definitive_Edition/" }],
     frontline: false,
     ignoreIndex: true,
     title:
-      "<a href='https://hasura.io/learn/'>graphql </a><div class='greenCircle'></div><a href='https://hasura.io/learn/graphql/react/introduction/'>react</a>"
+      "wiki 繁體中文版"
   },
   siteMetadata: {
-    title: "Gatsby Gitbook Boilerplate | Hasura",
-    description: "Documentation built with mdx. Powering hasura.io/learn ",
+    title: "AoE2 Definitive Edition",
+    description: "Documentation built with mdx.",
     ogImage: null,
     docsLocation:
-      "https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content",
-    favicon: "https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg"
+      "https://github.com/LaymanTruant/aoe2de/tree/master/app/content",
+    favicon: "https://imgur.com/YlO4ts6.png"
   },
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
