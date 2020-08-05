@@ -10,7 +10,7 @@ const config = {
       "https://imgur.com/YlO4ts6.png",
     logoLink: "/",
     title:
-      "<div>世紀帝國2決定版<div>",
+      "<div>世紀帝國2決定版</div>",
     githubUrl: "https://github.com/LaymanTruant/aoe2de",
     helpUrl: "",
     tweetText: "",
