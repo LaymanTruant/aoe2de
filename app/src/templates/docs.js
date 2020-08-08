@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
+import { MDXProvider } from "@mdx-js/react";
 
 import { Layout, Link } from "$components";
 import NextPrevious from "../components/NextPrevious";
@@ -13,6 +14,11 @@ import {
 } from "../components/styles/Docs";
 
 const { forcedNavOrder } = config.sidebar;
+const customReference = (props) => <a {...props} />;
+
+const components = {
+  a: customReference,
+};
 
 export default class MDXRuntimeTest extends Component {
   render() {
@@ -116,9 +122,11 @@ export default class MDXRuntimeTest extends Component {
             )}
           </Edit>
         </div>
+        <MDXProvider components={components}>
         <StyledMainWrapper>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </StyledMainWrapper>
+        </MDXProvider>
         <div className="addPaddTopBottom">
           <NextPrevious mdx={mdx} nav={nav} />
         </div>
