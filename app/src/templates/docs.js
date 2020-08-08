@@ -10,7 +10,7 @@ import config from "../../config";
 import {
   Edit,
   StyledHeading,
-  StyledMainWrapper
+  StyledMainWrapper,
 } from "../components/styles/Docs";
 
 const { forcedNavOrder } = config.sidebar;
@@ -31,19 +31,19 @@ export default class MDXRuntimeTest extends Component {
       allMdx,
       mdx,
       site: {
-        siteMetadata: { docsLocation, title }
-      }
+        siteMetadata: { docsLocation, title },
+      },
     } = data;
 
     const gitHub = require("../components/images/github.svg");
 
     const navItems = allMdx.edges
       .map(({ node }) => node.fields.slug)
-      .filter(slug => slug !== "/")
+      .filter((slug) => slug !== "/")
       .sort()
       .reduce(
         (acc, cur) => {
-          if (forcedNavOrder.find(url => url === cur)) {
+          if (forcedNavOrder.find((url) => url === cur)) {
             return { ...acc, [cur]: [cur] };
           }
 
@@ -53,7 +53,7 @@ export default class MDXRuntimeTest extends Component {
             prefix += "/";
           }
 
-          if (prefix && forcedNavOrder.find(url => url === `/${prefix}`)) {
+          if (prefix && forcedNavOrder.find((url) => url === `/${prefix}`)) {
             return { ...acc, [`/${prefix}`]: [...acc[`/${prefix}`], cur] };
           }
           return { ...acc, items: [...acc.items, cur] };
@@ -66,7 +66,7 @@ export default class MDXRuntimeTest extends Component {
         return acc.concat(navItems[cur]);
       }, [])
       .concat(navItems.items)
-      .map(slug => {
+      .map((slug) => {
         if (slug) {
           const { node } = allMdx.edges.find(
             ({ node }) => node.fields.slug === slug
@@ -123,9 +123,9 @@ export default class MDXRuntimeTest extends Component {
           </Edit>
         </div>
         <MDXProvider components={components}>
-        <StyledMainWrapper>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </StyledMainWrapper>
+          <StyledMainWrapper>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </StyledMainWrapper>
         </MDXProvider>
         <div className="addPaddTopBottom">
           <NextPrevious mdx={mdx} nav={nav} />
