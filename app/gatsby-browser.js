@@ -6,3 +6,14 @@ export const onServiceWorkerUpdateReady = () => {
     window.location.reload();
   }
 };
+
+export const shouldUpdateScroll = ({ routerProps: { location } }) => {
+  console.log(JSON.stringify(location))
+  if (location.hash) {
+    // if redirect to anchors, do not retain scroll position
+    return false;
+  }
+
+  // otherwise use default scroll behavior to retain scroll position
+  return true;
+};
