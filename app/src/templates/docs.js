@@ -14,7 +14,7 @@ import {
 } from "../components/styles/Docs";
 
 const { forcedNavOrder } = config.sidebar;
-const customReference = (props) => <a {...props} />;
+const customReference = (props) => <Link to={props.href} {...props} />;
 
 const components = {
   a: customReference,
